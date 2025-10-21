@@ -1,163 +1,218 @@
 /* Базовые стили */
+/* Сбрасываем стандартные отступы и задаем модель размера для всех элементов */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Убираем внешние отступы у всех элементов */
+    padding: 0; /* Убираем внутренние отступы у всех элементов */
+    box-sizing: border-box; /* Размер элемента включает padding и border */
 }
 
+/* Стили для тела документа */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: cian;
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт Arial или без засечек */
+    line-height: 1.6; /* Межстрочный интервал 1.6 от размера шрифта */
+    color: cian; /* Цвет текста (cyan - голубой) */
 }
 
+/* Контейнер для центрирования контента */
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 960px; /* Максимальная ширина контейнера 960px */
+    margin: 0 auto; /* Автоматические отступы слева/справа для центрирования */
+    padding: 0 15px; /* Внутренние отступы слева/справа по 15px */
 }
 
-/* Шапка */
+/* Шапка сайта - убираем ограничения по ширине */
 #header {
-    background-color: #f8f9fa;/*цвет заднего фона "названия сайта"*/
-    border-bottom: 1px solid green;/* линия под названием сайта*/
-    width: 100%;
+    background-color: #f8f9fa; /* Светло-серый цвет фона шапки */
+    border-bottom: 1px solid green; /* Зеленая линия внизу шапки */
+    width: 100%; /* Шапка занимает 100% ширины экрана */
 }
 
+/* Верхняя часть шапки с логотипом и меню */
 .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;/*Расстояние надписей относительно верхней части */
+    display: flex; /* Включаем flexbox для расположения элементов в строку */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    padding: 10px 20px; /* Внутренние отступы: 10px сверху/снизу, 20px слева/справа */
+    border-bottom: 1px solid #dee2e6; /* Серая линия разделителя снизу */
+    max-width: 100%; /* Блок занимает всю доступную ширину */
 }
 
+/* Контейнер для логотипа и названия сайта */
+.logo {
+    display: flex; /* Flexbox для расположения логотипа и названия в строку */
+    align-items: center; /* Выравниваем по вертикали по центру */
+    gap: 15px; /* Расстояние между логотипом и названием сайта */
+}
+
+/* Стили для изображения логотипа */
 .logo img {
-    height: 50px;/*Размер лого*/
-    width: auto;
+    height: 50px; /* Высота логотипа 50px */
+    width: auto; /* Ширина автоматическая для сохранения пропорций */
 }
 
+/* Стили для названия сайта в шапке */
+.site-name {
+    font-size: 1.5rem; /* Размер шрифта 1.5rem */
+    font-weight: bold; /* Жирное начертание */
+    color: #343a40; /* Темно-серый цвет текста */
+}
+
+/* Навигационное меню */
+.menu {
+    display: flex; /* Flexbox для расположения ссылок в строку */
+    gap: 20px; /* Расстояние между ссылками меню */
+}
+
+/* Стили для ссылок меню */
 .menu a {
-    margin-left: 20px;/*расстояние между"Ссылка меню1,ссылка2,ссылка3"*/
-    text-decoration: none;
-    color: #007bff;/*цвет "Ссылка меню1,ссылка2,ссылка3"*/
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #007bff; /* Синий цвет ссылок */
+    font-weight: 500; /* Средняя жирность шрифта */
+    padding: 5px 10px; /* Внутренние отступы: 5px сверху/снизу, 10px слева/справа */
+    border-radius: 4px; /* Закругление углов 4px */
+    transition: background-color 0.3s; /* Плавный переход цвета фона за 0.3 секунды */
 }
 
+/* Стили для ссылок меню при наведении курсора */
 .menu a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Подчеркиваем ссылку при наведении */
+    background-color: #e9ecef; /* Светло-серый фон при наведении */
 }
 
+/* Область с основным заголовком сайта */
 .site-title {
-    text-align: center;
-    padding: 20px 0;/*Ширина шапки*/
+    padding: 20px 20px; /* Внутренние отступы по 20px со всех сторон */
+    border-bottom: 1px solid #dee2e6; /* Серая линия разделителя снизу */
 }
 
+/* Стили для главного заголовка сайта */
 .site-title h1 {
-    font-size: 2.5rem;
-    color: #343a40;/*Цвет "Название сайта"*/
+    font-size: 2.5rem; /* Большой размер шрифта 2.5rem */
+    color: #343a40; /* Темно-серый цвет текста */
 }
 
-/* Основной контент */
+/* Основной контент страницы */
 main {
-    padding: 30px 0;
+    padding: 30px 0; /* Внутренние отступы: 30px сверху/снизу, 0 слева/справа */
 }
 
+/* Стили для секций контента */
 section {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Отступ снизу 40px между секциями */
 }
 
+/* Стили для заголовков второго уровня */
 h2 {
-    margin-bottom: 20px;/*Отступ после "гиперссылки"*/
-    padding-bottom: 10px;
+    margin-bottom: 20px; /* Отступ снизу 20px */
+    padding-bottom: 10px; /* Внутренний отступ снизу 10px */
 }
 
-/* Таблица */
+/* Стили для кастомной таблицы */
 #custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    width: 100%; /* Таблица занимает 100% ширины контейнера */
+    border-collapse: collapse; /* Объединяем границы ячеек */
+    margin-bottom: 20px; /* Отступ снизу 20px */
 }
 
+/* Стили для ячеек таблицы (заголовков и данных) */
 #custom-table th,
 #custom-table td {
-    border: 2px solid #dee2e6;/*Линия в таблице между ячейками*/
-    padding: 15px;/*размер таблицы*/
-    text-align: left;/*расположение слов в таблице*/
+    border: 2px solid #dee2e6; /* Серая граница толщиной 2px */
+    padding: 15px; /* Внутренние отступы 15px со всех сторон */
+    text-align: left; /* Выравнивание текста по левому краю */
 }
 
+/* Стили для заголовков таблицы */
 #custom-table th {
-    background-color: #007bff;/*Цвет первой горизонтальной колонки*/
-    color: white;/*Цвет текста на ней*/
-    font-weight: bold;
+    background-color: #007bff; /* Синий фон заголовков */
+    color: white; /* Белый цвет текста */
+    font-weight: bold; /* Жирное начертание */
 }
 
-#custom-table tr:nth-child(even) {/* Цвет фона для четных*/
-    background-color: #007bff;
-	color: white;
-    	font-weight: bold;
+/* Стили для четных строк таблицы */
+#custom-table tr:nth-child(even) {
+    background-color: #007bff; /* Синий фон для четных строк */
+    color: white; /* Белый цвет текста */
+    font-weight: bold; /* Жирное начертание */
 }
 
-#custom-table tr:nth-child(odd) {/* Цвет фона для нечетных*/
-    background-color: #c8efd3;
+/* Стили для нечетных строк таблицы */
+#custom-table tr:nth-child(odd) {
+    background-color: #c8efd3; /* Светло-зеленый фон для нечетных строк */
 }
 
-
-/* Форма */
+/* Стили для формы */
 form div {
-    margin-bottom: 10px;/*расстояние между ФИО,ТЕЛЕФОН,Емаил,дата*/
+    margin-bottom: 10px; /* Отступ снизу 10px между элементами формы */
 }
 
+/* Стили для меток формы */
 label {
-    display: block;
-    margin-bottom: 5px;/*расстояние между Наименованием(фио и другие) и табличкой*/
-    font-weight: bold;
+    display: block; /* Метка занимает всю ширину (блочный элемент) */
+    margin-bottom: 5px; /* Отступ снизу 5px */
+    font-weight: bold; /* Жирное начертание */
 }
 
+/* Стили для полей ввода, выпадающих списков и текстовой области */
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="date"],
 select,
 textarea {
-    width: 100%;/*Длина ячеек для заполнения*/
-    padding: 10px;/*Ширина ячеек для заполнения*/
-    border: 2px/*Ширина окантовки*/ solid #ced4da;/*Цвет окантовки ячеек*/
-    border-radius: 10px;/*Закругленность окантовки*/
+    width: 100%; /* Элементы занимают 100% ширины контейнера */
+    padding: 10px; /* Внутренние отступы 10px */
+    border: 2px solid #ced4da; /* Серая граница толщиной 2px */
+    border-radius: 10px; /* Закругление углов 10px */
 }
 
+/* Стили для кнопки отправки формы */
 button {
-    background-color: #007bff;/*цвет кнопки сохранить*/
-    color:white;/*цвет надписи"сохранить"*/
-    padding: 10px 20px;/*длина и ширина кнопки*/
-    border: none;
-    border-radius: 10px;/*закругленность*/
-    cursor: pointer;
+    background-color: #007bff; /* Синий фон кнопки */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Внутренние отступы: 10px сверху/снизу, 20px слева/справа */
+    border: none; /* Убираем стандартную границу */
+    border-radius: 10px; /* Закругление углов 10px */
+    cursor: pointer; /* Курсор в виде указателя при наведении */
 }
 
+/* Стили для кнопки при наведении курсора */
 button:hover {
-    background-color: #0056b3;/*цвет,на который меняется кнопка сохранить при наведении на нее*/
+    background-color: #0056b3; /* Темно-синий фон при наведении */
 }
 
-/* Подвал */
+/* Подвал сайта - убираем ограничения по ширине */
 #footer {
-    background-color: 
-    text-align: left;   
+    background-color: #f8f9fa; /* Светло-серый фон подвала */
+    border-top: 1px solid #dee2e6; /* Серая линия разделителя сверху */
+    padding: 20px 20px; /* Внутренние отступы по 20px со всех сторон */
+    text-align: left; /* Выравнивание текста по левому краю */
+    width: 100%; /* Подвал занимает 100% ширины экрана */
 }
 
-/* Списки */
+/* Стили для текста в подвале */
+#footer p {
+    font-weight: bold; /* Жирное начертание */
+    color: #343a40; /* Темно-серый цвет текста */
+}
+
+/* Стили для нумерованного списка */
 ol {
-    padding-left: 20px;/*расположение ссылок относительно left*/
+    padding-left: 20px; /* Внутренний отступ слева 20px для отступа чисел */
 }
 
+/* Стили для элементов списка */
 li {
-    margin-bottom: 15px;/*ширина между ссылками*/
+    margin-bottom: 15px; /* Отступ снизу 15px между элементами списка */
 }
 
+/* Стили для всех ссылок */
 a {
-    color: #007bff;/*цвет ссылок*/
-    text-decoration: none;
+    color: #007bff; /* Синий цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
+/* Стили для ссылок при наведении курсора */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Подчеркиваем ссылку при наведении */
 }
-
